@@ -43,7 +43,6 @@ export const DATA = {
   },
   contact: {
     email: "marinakamel909@gmail.com",
-    tel: "+1 (514) 562-6037",
     linkedin: "https://www.linkedin.com/in/marina-kamel-a7a08a240",
     github: "https://github.com/MarinaKamel-coder"
   }

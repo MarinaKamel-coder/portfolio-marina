@@ -72,19 +72,7 @@ export default function Home() {
               <span>GitHub</span>
             </a>
           </div>
-          
-          {/* Infos de contact discrètes */}
-          <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-xs font-medium text-muted-foreground tracking-wider uppercase">
-            <div className="flex items-center gap-1.5 hover:text-white transition-colors">
-              <MapPin className="size-3.5 text-primary" />
-              <span>{DATA.header.location}</span>
-            </div>
-            <div className="flex items-center gap-1.5 hover:text-white transition-colors">
-              <Phone className="size-3.5 text-primary" />
-              <span>{DATA.contact.tel}</span>
-            </div>
-          </div>
-        </div>
+        </div> 
         
         <div className="flex justify-center pt-16">
           <ChevronDown className="size-5 text-muted-foreground animate-bounce" />
