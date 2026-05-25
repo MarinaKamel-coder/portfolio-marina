@@ -1,14 +1,18 @@
-// src/app/page.tsx
+"use client";
+
 import { Mail, MapPin, Phone, ChevronDown } from "lucide-react";
 import PortfolioTabs from "@/components/portfolio-tabs";
 import { DATA } from "@/constants/data";
 
-export const metadata = {
-  title: `${DATA.header.name} | ${DATA.header.title}`,
-  description: DATA.header.intro,
-};
-
 export default function Home() {
+  // Fonction pour faire défiler la page de manière fluide jusqu'aux onglets
+  const handleScroll = () => {
+    const mainContent = document.getElementById("portfolio-content");
+    if (mainContent) {
+      mainContent.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
       <section className="relative overflow-hidden border-b border-border/40 py-24 md:py-36">
@@ -74,13 +78,20 @@ export default function Home() {
           </div>
         </div> 
         
+        {/* Flèche enveloppée dans un bouton interactif */}
         <div className="flex justify-center pt-16">
-          <ChevronDown className="size-5 text-muted-foreground animate-bounce" />
+          <button 
+            onClick={handleScroll} 
+            className="focus:outline-none cursor-pointer group"
+            aria-label="Défiler jusqu'au contenu"
+          >
+            <ChevronDown className="size-5 text-muted-foreground animate-bounce group-hover:text-primary transition-colors" />
+          </button>
         </div>
       </section>
 
-      {/* Main Content Area */}
-      <main className="max-w-5xl mx-auto px-6 py-20">
+      {/* Zone cible principale du défilement (id + scroll margin ajoutés) */}
+      <main id="portfolio-content" className="max-w-5xl mx-auto px-6 py-20 scroll-mt-12">
         <PortfolioTabs />
       </main>
     </div>
