@@ -6,6 +6,7 @@ import { Briefcase, GraduationCap, Sparkles, LayoutGrid, Code2, ExternalLink } f
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import SkillsGrid from "./skills-grid";
 import { DATA, CURRENT_ACTIVITIES, EXPERIENCES, FORMATIONS, PROJECTS, DETAILED_SKILLS } from "@/constants/data";
 
 const getLevelPercentage = (level?: string): number => {
@@ -196,47 +197,10 @@ export default function PortfolioTabs() {
         ))}
       </TabsContent>
 
-      {/* COMPÉTENCES - Mis à jour à 2 colonnes (2 par row) */}
-      <TabsContent value="skills" className="grid grid-cols-1 md:grid-cols-2 gap-6 focus:outline-none">
-        {SKILLS_GRID_DATA.map((category, catIdx) => (
-          <motion.div
-            key={catIdx}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: catIdx * 0.06 }}
-          >
-            <Card className="rounded-2xl border border-border/40 bg-card/30 backdrop-blur-md p-6 flex flex-col justify-between shadow-md h-full hover:border-border/80 transition-colors">
-              <div>
-                <div className="flex items-center gap-2 mb-6">
-                  <span className={`size-1.5 rounded-full ${category.barBg}`} />
-                  <h3 className={`text-xs font-black tracking-widest ${category.colorClass}`}>
-                    {category.title}
-                  </h3>
-                </div>
+      {/* COMPÉTENCES )*/}
 
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIdx) => (
-                    <div key={skillIdx} className="space-y-1.5">
-                      <div className="flex items-center justify-between text-xs font-medium">
-                        <span className="text-zinc-300 font-light">{skill.name}</span>
-                        <span className="text-zinc-500 font-mono text-[10px]">{skill.level}%</span>
-                      </div>
-                      
-                      <div className="h-1.5 w-full bg-zinc-950 rounded-full overflow-hidden border border-zinc-900/50">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={{ width: `${skill.level}%` }}
-                          transition={{ duration: 0.8, ease: "easeOut", delay: skillIdx * 0.02 }}
-                          className={`h-full ${category.barBg} rounded-full`}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Card>
-          </motion.div>
-        ))}
+      <TabsContent value="skills" className="focus:outline-none">
+        <SkillsGrid /> 
       </TabsContent>
 
       {/* FORMATION */}

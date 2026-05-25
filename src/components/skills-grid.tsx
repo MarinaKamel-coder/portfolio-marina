@@ -21,7 +21,7 @@ export default function SkillsGrid() {
   const SKILLS_DATA = [
     {
       title: "FRONTEND & MOBILE",
-      colorClass: "text-primary", 
+      colorClass: "text-white", 
       barBg: "bg-primary",
       skills: DETAILED_SKILLS["Développement Frontend & Mobile"].map(s => ({
         name: s.nom,
@@ -30,8 +30,8 @@ export default function SkillsGrid() {
     },
     {
       title: "BACKEND & API",
-      colorClass: "text-zinc-400", 
-      barBg: "bg-zinc-500",
+      colorClass: "text-white", 
+      barBg: "bg-red-800",
       skills: DETAILED_SKILLS["Développement Backend & API"].map(s => ({
         name: s.nom,
         level: getLevelPercentage(s.niveau),
@@ -39,8 +39,8 @@ export default function SkillsGrid() {
     },
     {
       title: "DATABASES & DESKTOP",
-      colorClass: "text-primary/80", 
-      barBg: "bg-primary/80",
+      colorClass: "text-white", 
+      barBg: "bg-cyan-600/80",
       skills: [
         ...DETAILED_SKILLS["Bases de données"].map(db => ({ name: db, level: 88 })),
         ...DETAILED_SKILLS["Applications de Bureau"].map(d => ({
@@ -51,7 +51,7 @@ export default function SkillsGrid() {
     },
     {
       title: "TOOLS & WORKFLOW",
-      colorClass: "text-secondary", 
+      colorClass: "text-white", 
       barBg: "bg-secondary",
       skills: [
         ...DETAILED_SKILLS["Outils & DevOps"].map(o => ({
@@ -64,12 +64,11 @@ export default function SkillsGrid() {
   ];
 
   return (
-    /* Grille configurée sur 2 colonnes maximum (md:grid-cols-2) avec un espacement ajusté (gap-6) */
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
       {SKILLS_DATA.map((category, catIdx) => (
         <div
           key={catIdx}
-          className="rounded-2xl border border-border/40 bg-card/30 backdrop-blur-md p-6 flex flex-col justify-between shadow-md hover:border-border/80 transition-colors"
+          className="rounded-2xl border border-zinc-800 bg-zinc-900/20 backdrop-blur-md p-6 flex flex-col justify-between shadow-md hover:border-cyan-500/20 transition-colors"
         >
           <div>
             {/* EN-TÊTE DE LA CATÉGORIE */}
