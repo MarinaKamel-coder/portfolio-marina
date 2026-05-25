@@ -1,64 +1,99 @@
-import Image from "next/image";
+// src/app/page.tsx
+import { Mail, MapPin, Phone, ChevronDown } from "lucide-react";
+import PortfolioTabs from "@/components/portfolio-tabs";
+import { DATA } from "@/constants/data";
+
+export const metadata = {
+  title: `${DATA.header.name} | ${DATA.header.title}`,
+  description: DATA.header.intro,
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
+      <section className="relative overflow-hidden border-b border-border/40 py-24 md:py-36">
+        {/* Cercles de lumière vibrante en arrière-plan */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
+        <div className="absolute top-20 left-1/3 w-[300px] h-[300px] bg-secondary/10 blur-[100px] rounded-full pointer-events-none" />
+        
+        <div className="relative max-w-5xl mx-auto px-6 text-center space-y-8">
+          {/* Badge de disponibilité */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-card border border-border shadow-md backdrop-blur-md">
+            <span className="relative flex size-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+              <span className="relative inline-flex rounded-full size-2 bg-secondary"></span>
+            </span>
+            <span className="text-xs text-muted-foreground font-medium tracking-wide uppercase">
+              Disponible pour de nouvelles opportunités
+            </span>
+          </div>
+          
+          {/* Titre */}
+          <h1 className="text-5xl md:text-8xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white via-zinc-200 to-primary font-serif">
+            {DATA.header.name}
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          
+          {/* Sous-titre */}
+          <p className="text-xl md:text-3xl text-secondary font-light tracking-wide max-w-3xl mx-auto">
+            {DATA.header.title}
           </p>
+          
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
+            {DATA.header.intro}
+          </p>
+          
+          {/* Actions / Liens stylisés */}
+          <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+            <a
+              href={`mailto:${DATA.contact.email}`}
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-purple-600 text-white font-medium rounded-xl hover:opacity-90 transition-all text-sm shadow-lg shadow-primary/20"
+            >
+              <Mail className="size-4" />
+              <span>Me contacter</span>
+            </a>
+            
+            <a
+              href={DATA.contact.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-card border border-border text-zinc-300 font-medium rounded-xl hover:text-white hover:border-secondary/50 hover:bg-zinc-900/50 transition-all text-sm"
+            >
+              <svg className="size-4 fill-current text-muted-foreground group-hover:text-secondary" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            
+            <a
+              href={DATA.contact.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-card border border-border text-zinc-300 font-medium rounded-xl hover:text-white hover:border-secondary/50 hover:bg-zinc-900/50 transition-all text-sm"
+            >
+              <svg className="size-4 fill-current text-muted-foreground" viewBox="0 0 24 24"><path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" /></svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+          
+          {/* Infos de contact discrètes */}
+          <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-xs font-medium text-muted-foreground tracking-wider uppercase">
+            <div className="flex items-center gap-1.5 hover:text-white transition-colors">
+              <MapPin className="size-3.5 text-primary" />
+              <span>{DATA.header.location}</span>
+            </div>
+            <div className="flex items-center gap-1.5 hover:text-white transition-colors">
+              <Phone className="size-3.5 text-primary" />
+              <span>{DATA.contact.tel}</span>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        
+        <div className="flex justify-center pt-16">
+          <ChevronDown className="size-5 text-muted-foreground animate-bounce" />
         </div>
+      </section>
+
+      {/* Main Content Area */}
+      <main className="max-w-5xl mx-auto px-6 py-20">
+        <PortfolioTabs />
       </main>
     </div>
   );
