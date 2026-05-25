@@ -98,7 +98,7 @@ export default function PortfolioTabs() {
             <div className="absolute top-0 right-0 w-[200px] h-[200px] bg-primary/5 blur-[60px] rounded-full pointer-events-none" />
             <div className="space-y-4">
               <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-100">{DATA.about.title}</h2>
-              <h3 className="text-lg text-cyan-400 font-medium tracking-wide">{DATA.about.subtitle}</h3>
+              <h3 className="text-lg text-primary font-medium tracking-wide">{DATA.about.subtitle}</h3>
               <p className="text-muted-foreground leading-relaxed text-sm sm:text-base font-light">{DATA.about.description}</p>
               <div className="pt-6 border-t border-border/40 mt-6">
                 <p className="text-xs font-bold uppercase tracking-wider text-primary">Objectif professionnel</p>
