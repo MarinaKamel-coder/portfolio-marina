@@ -76,7 +76,7 @@ export default function Footer() {
               title="Retour en haut"
             >
               <ArrowUp className="size-3.5 animate-bounce" />
-              <span className="hidden sm:inline">Top</span>
+              <span className="hidden sm:inline">Haut</span>
             </button>
           </div>
 

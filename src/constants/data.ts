@@ -50,19 +50,28 @@ export const DATA = {
 
 export const CURRENT_ACTIVITIES: ActivityItem[] = [
   {
-    title: "Currently Learning",
+    title: "En cours d'apprentissage",
     icon: "📘",
-    items: ["Next.js 15 App Router & Server Components", "AI integration in web applications", "Advanced TypeScript patterns"]
+    items: [
+      "Intégration de l'IA dans les applications web", 
+      "Patterns TypeScript avancés"
+    ]
   },
   {
-    title: "Currently Building",
+    title: "En cours de développement",
     icon: "🛠️",
-    items: ["Upgrading this portfolio to Next.js", "CADS - Client Accounting Data Store", "MyInventory Mobile App"]
+    items: [
+      "CADS - Client Accounting Data Store", 
+      "Application mobile MyInventory"
+    ]
   },
   {
-    title: "Currently Exploring",
+    title: "En cours d'exploration",
     icon: "🚀",
-    items: ["Clean Architecture & Design Patterns", "Frontend system architecture", "The latest features in React 19"]
+    items: [
+      "Clean Architecture & Design Patterns", 
+      "Architecture des systèmes frontend"
+    ]
   }
 ];
 
@@ -120,7 +129,7 @@ export const EXPERIENCES: ExperienceItem[] = [
 
 export const FORMATIONS: FormationItem[] = [
   {
-    titre: "Développement de logiciels",
+    titre: "AEC en Développement de logiciels",
     ecole: "Collège de Maisonneuve, Montréal, QC",
     date: "2025 – 2026"
   },
