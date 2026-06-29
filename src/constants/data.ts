@@ -83,9 +83,10 @@ export const EXPERIENCES: ExperienceItem[] = [
     location: "Québec, Canada",
     type: "internship",
     bullets: [
-      "Développement et optimisation de modules web modernes en utilisant React, Next.js et TypeScript.",
-      "Conception et intégration d'interfaces utilisateur fluides, réactives et hautement interactives avec Tailwind CSS.",
-      "Participation active aux mêlées quotidiennes et aux cycles de développement selon la méthodologie Agile (Scrum)."
+      "Développement et optimisation d'un site WordPress multilingue (FR/EN) avec PHP, Tailwind CSS et XAMPP.",
+      "Analyse de cahiers de charges et développement de trois applications web transactionnelles : Proximity Planner, Proximity Quote et Proximity Deliver.",
+      "Conception d'APIs REST indépendantes, migrations de bases de données sur Supabase (PostgreSQL) et intégration dans un CRM d'entreprise.",
+      "Refactoring d'architecture pour découpler les APIs conformément aux spécifications techniques."
     ]
   },
   {
