@@ -79,7 +79,7 @@ export const EXPERIENCES: ExperienceItem[] = [
   {
     role: "Développeuse Logiciel Full-Stack (Stagiaire)",
     company: "Pandora Brand",
-    period: "Mai 2026 - Présent",
+    period: "Mai 2026 - Juil 2026",
     location: "Québec, Canada",
     type: "internship",
     bullets: [
