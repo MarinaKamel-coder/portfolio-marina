@@ -174,7 +174,7 @@ export const PROJECTS: ProjectItem[] = [
     tech: ["React", "Node.js", "TypeScript", "Tailwind CSS"],
     badge: "LMS Platform",
     category: "Web",
-    lien: "https://github.com/MarinaKamel-coder/Apprentissage.git"
+    lien: "https://apprentissage-six.vercel.app"
   },
   {
     title: "📦 MyInventory - Gestion d’inventaire mobile",
@@ -200,6 +200,22 @@ export const PROJECTS: ProjectItem[] = [
     category: "Web",
     lien: "https://meetup-sportif.vercel.app" 
   },
+    {
+    title: "🌱 GreenCommute",
+    description: "Plateforme de covoiturage écologique. Calculez l'impact CO2, gérez les réservations en temps réel et créez une communauté engagée autour du transport écoresponsable.",
+    tech: ["React", "Node.js", "TypeScript"],
+    badge: "Web App",
+    category: "Web",
+    lien: "https://green-commute-eight.vercel.app"
+  },
+    {
+    title: "🌶️ Catalogue d’Épice",
+    description: "Application web dynamique pour afficher et gérer un catalogue d’épices sur un serveur, avec un système de filtrage et de recherche efficaces.",
+    tech: ["HTML", "CSS", "JavaScript", "JSON", "Bootstrap"],
+    badge: "Web Dynamic",
+    category: "Web",
+    lien: "https://app-epices.onrender.com/"
+  },
   {
     title: "JewelFlow 💎",
     badge: "Architecture Multi‑Services & DevOps",
@@ -208,14 +224,7 @@ export const PROJECTS: ProjectItem[] = [
     category: "Web",
     lien: "https://github.com/MarinaKamel-coder/bijouterie-JewelFlow.git" 
   },
-  {
-    title: "🌱 GreenCommute",
-    description: "Plateforme de covoiturage écologique. Calculez l'impact CO2, gérez les réservations en temps réel et créez une communauté engagée autour du transport écoresponsable.",
-    tech: ["React", "Node.js", "TypeScript"],
-    badge: "Web App",
-    category: "Web",
-    lien: "https://github.com/MarinaKamel-coder/GreenCommute.git"
-  },
+
   {
     title: "📁 Gestionnaire de Cabinet Comptable",
     description: "Une application de bureau robuste et intuitive développée en Python 3 avec le framework PyQt6 permettant d'optimiser la gestion et le suivi des dossiers clients.",
@@ -223,14 +232,6 @@ export const PROJECTS: ProjectItem[] = [
     badge: "Desktop App",
     category: "Desktop",
     lien: "https://github.com/MarinaKamel-coder/CADS-desktop.git"
-  },
-  {
-    title: "🌶️ Catalogue d’Épice",
-    description: "Application web dynamique pour afficher et gérer un catalogue d’épices sur un serveur, avec un système de filtrage et de recherche efficaces.",
-    tech: ["HTML", "CSS", "JavaScript", "JSON", "Bootstrap"],
-    badge: "Web Dynamic",
-    category: "Web",
-    lien: "https://app-epices.onrender.com/"
   },
   {
     title: "👤 Portfolio Personnel",
